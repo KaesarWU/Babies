@@ -1,0 +1,41 @@
+/* Add all the CSS from previous implementation here */
+
+/* Speech Bubble Styles */
+.speech-bubble {
+    position: fixed;
+    bottom: 100px;
+    left: 90px;
+    background: white;
+    border: 2px solid #3498db;
+    border-radius: 20px;
+    padding: 12px 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    max-width: 200px;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: #3498db transparent transparent;
+}
+
+.speech-bubble p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.speech-bubble.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Rest of your CSS from previous implementation */
